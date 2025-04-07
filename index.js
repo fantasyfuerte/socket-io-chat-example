@@ -14,9 +14,10 @@ app.get("/", (req, res) => {
   res.sendFile(join(__dirname, "index.html"));
 });
 
-io.on("conection", (socket) => {
+io.on("connection", (socket) => {
   console.log("An user connected");
 });
+
 server.listen(3000, () => {
   console.log("server running at http://localhost:3000");
 });
